@@ -1,0 +1,71 @@
+/* pages/list/list.wxss */
+
+.orderinfo_wrap {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #f7f8fa;
+
+}
+
+.orderinfo_top {
+  width: 100%;
+  background: #2a8eff;
+  padding-bottom: 28rpx;
+  margin-bottom: 20rpx;
+}
+
+.orderinfo_header {
+  color: #fff;
+  width: 100%;
+  padding: 0 0 0 30rpx;
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.icon-fanhui {
+  /* display: inline-block; */
+  float: left;
+  font-size: 36rpx;
+}
+
+.orderinfo_header text {
+  text-align: center;
+  font-size: 40rpx;
+  padding: 38rpx 40rpx 38rpx 0;
+  flex: 1;
+}
+.info_main{
+  flex: 1;
+  overflow-y: scroll;
+}
+.modle{
+  background: #fff;
+  margin-bottom: 30rpx;
+}
+.order_info_modle{
+  padding: 20rpx 26rpx 10rpx 26rpx;
+  font-size: 32rpx;
+  border-bottom: 1px solid #f7f8fa;
+  box-sizing: border-box;
+  color: #9e9eaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.order_info_modle label{
+  width: 40%;
+}
+.icon-dian:before{
+  font-size: 64rpx;
+  color: #2a8eff;
+  vertical-align: middle;
+}
+.order_info_modle text{
+  width: 60%;
+  color: #212a53;
+}

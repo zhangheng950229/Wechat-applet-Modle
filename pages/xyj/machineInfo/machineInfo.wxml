@@ -1,0 +1,99 @@
+<!-- pages/orderinfo/orderinfo.wxml -->
+<view class="container">
+  <view class="orderinfo_wrap">
+    <!-- 搜索模块 -->
+    <view class="orderinfo_top" hover-class="none" hover-stop-propagation="false">
+      <view class="orderinfo_header" hover-class="none" hover-stop-propagation="false">
+        <text>设备详情</text>
+      </view>
+    </view>
+    <!-- 订单详情 -->
+    <scroll-view class="info_main" scroll-y='true'>
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            设备编号:
+          </label>
+          <text>{{deviceInfo.devNo}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            类别:
+          </label>
+          <text>{{deviceInfo.name}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            IMEI编号:
+          </label>
+          <text>{{deviceInfo.imei}}</text>
+        </view>
+      </view>
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            状态:
+          </label>
+          <text>{{deviceInfo.deviceStatusStr}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            激活时间:
+          </label>
+          <text>{{deviceInfo.province}}{{deviceInfo.city}}{{deviceInfo.area}}{{deviceInfo.address}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            上月收入:
+          </label>
+          <text>{{deviceInfo.lastMonthMoney}}</text>
+        </view>
+      </view>
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            总收入:
+          </label>
+          <text>{{deviceInfo.money}}</text>
+        </view>
+        <!-- <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            上/离线时间:
+          </label>
+          <text>{{deviceInfo.freeTime}}</text>
+        </view> -->
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            设备所在地:
+          </label>
+          <text>{{deviceInfo.province}}{{deviceInfo.city}}{{deviceInfo.area}}{{deviceInfo.address}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            使用记录:
+          </label>
+          <text>
+            {{deviceInfo.useCounts}}
+          </text>
+
+        </view>
+      </view>
+      <navigator hover-class="none" url="../record/record?devNo={{deviceInfo.devNo}}">
+        <button style="background: #fff;color: #2a8eff;margin-bottom: 40rpx;border: 2rpx solid #2a8eff;" class="search_btn">查看记录</button>
+      </navigator>
+      <navigator hover-class="none" url="../modify/modify?devNo={{deviceInfo.devNo}}">
+        <button style="background: #2a8eff; color:#ffffff" class="search_btn">修改</button>
+      </navigator>
+    </scroll-view>
+  </view>
+</view>

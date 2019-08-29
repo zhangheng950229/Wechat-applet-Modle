@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="login_wrap">
+    <view class="login_banner_wrap" hover-class="none" hover-stop-propagation="false">
+      <image class="login_banner" src="./images/login_banner.png" mode="widthFix" lazy-load="false" />
+      
+    </view>
+    <view class="login_banner_wrap" hover-class="none" hover-stop-propagation="false">
+      <image class="login_titile" src="./images/login_head.png" mode="widthFix" lazy-load="false" />
+    </view>
+      
+    <view class="login_main">
+      <view class="count_num_wrap">
+        <image class="count_logo" src="./images/count_bg.png" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+        <input class="count_num" 
+        data-name='account'
+        bindinput="getVal" 
+        type="text" 
+        placeholder="请输入账号" />
+      </view>
+      <view class="pwd_wrap">
+        <image class="count_logo" src="./images/psw_bg.png" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+        <input class="passWord" 
+        bindinput="getVal" 
+        data-name="psw"
+        password="{{true}}" 
+        placeholder="请输入密码" />
+      </view>
+      <button class="login_btn" bindtap="handle">登录</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,165 @@
+/* pages/list/list.wxss */
+
+.list_top {
+  width: 100%;
+  background: #2a8eff;
+  padding-bottom: 28rpx;
+  margin-bottom: 20rpx;
+}
+
+.list_header {
+  color: #fff;
+  width: 100%;
+  padding: 0 0 0 30rpx;
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.icon-fanhui {
+  /* display: inline-block; */
+  float: left;
+  font-size: 36rpx;
+}
+
+.list_header text {
+  text-align: center;
+  font-size: 40rpx;
+  padding: 38rpx 40rpx 38rpx 0;
+  flex: 1;
+}
+
+
+/* 搜索模块上边输入框搜索按钮部分 */
+.search_top {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 30rpx;
+}
+
+.ipt_wrap {
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
+  align-items: center;
+}
+
+.ipt_wrap input {
+  width: 80%;
+  height: 48rpx;
+  padding-left: 10rpx;
+  margin-right: 12rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  font-size: 28rpx;
+}
+
+.search_btn {
+  width: 160rpx;
+  height: 54rpx;
+  background: #fff;
+  color: #006cd9;
+  border-radius: 100rpx;
+  letter-spacing: 10rpx;
+  line-height: 54rpx;
+}
+
+.search_bottom {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 20rpx 20rpx 0;
+}
+
+
+.chose_wrap {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+
+.picker_wrap {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.picker_wrap .icon-sanjiao {
+  font-size: 48rpx;
+}
+
+
+/* 重置按钮 */
+.reset_btn {
+  width: 90%;
+  height: 64rpx;
+  background: #df5f5e;
+  color: #fff;
+  border-radius: 10rpx;
+  margin: 20rpx auto;
+  font-size: 32rpx;
+  line-height: 64rpx;
+}
+
+/* 列表样式 */
+
+.list_info {
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 30rpx 20rpx;
+  box-shadow: 0 0 5px #d4d4d4;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24rpx;
+}
+
+.list_info view text {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+}
+
+.list_l {
+  width: 20%;
+  padding-right: 16rpx;
+  border-right: 1px solid #dddddd;
+  text-align: center;
+  font-size: 36rpx;
+  color: #b58241;
+}
+
+.list_c {
+  width: 40%;
+  padding: 0 16rpx;  
+  
+
+  /* width: 50%; 
+  padding-right: 16rpx; */
+
+  border-right: 1px solid #dddddd;
+}
+/* 三列 */
+.list_c text:nth-of-type(1),.list_r text:nth-of-type(1){
+  padding-bottom: 14rpx;
+}
+.list_r {
+  width: 40%;
+  /* width: 50%;  */
+  padding-left: 16rpx;
+  box-sizing: border-box;
+}
+
+
+
+
+/*  */

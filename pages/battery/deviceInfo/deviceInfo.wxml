@@ -1,0 +1,95 @@
+<!-- pages/orderinfo/orderinfo.wxml -->
+<view class="container">
+  <view class="orderinfo_wrap">
+    <!-- 搜索模块 -->
+    <!-- <view class="orderinfo_top" hover-class="none" hover-stop-propagation="false">
+      <view class="orderinfo_header" hover-class="none" hover-stop-propagation="false">
+        <text>设备详情</text>
+      </view>
+    </view> -->
+    <!-- 订单详情 -->
+    <scroll-view class="info_main" scroll-y='true'>
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            设备编号:
+          </label>
+          <text>{{deviceInfo.devNo}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            可借数量:
+          </label>
+          <text>{{deviceInfo.borrowNumber}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            空槽数量:
+          </label>
+          <text>{{deviceInfo.stillNumber}}</text>
+        </view>
+      </view>
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            是否可用:
+          </label>
+          <text>{{deviceInfo.statusStr}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            设备地址:
+          </label>
+          <text>{{deviceInfo.province}}{{deviceInfo.city}}{{deviceInfo.area}}{{deviceInfo.address}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            每小时单价:
+          </label>
+          <text>{{deviceInfo.unitPrice}}</text>
+        </view>
+      </view>
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            押金金额:
+          </label>
+          <text>{{deviceInfo.deposit}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            免费时长:
+          </label>
+          <text>{{deviceInfo.freeTime}}</text>
+        </view>
+        <view class="order_info_modle" style="padding: 20rpx 0;">
+          <label for="" style="display: flex;">
+            <text class="iconfont icon-dian:before" style="width: 26%;"></text>
+            <text style="color: #9e9eaa;">最后一次\n心跳时间:</text>
+          </label>
+          <text>{{deviceInfo.lastTime}}</text>
+        </view>
+        <view class="order_info_modle" style="align-items: flex-start;">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            电池列表:
+          </label>
+          <view style="width: 60%;display: flex;flex-direction: column;align-items:center;">
+            <text wx:for="{{deviceInfo.batteryList}}" wx:for-item="battery" wx:for-index="batteryIndex" style="width: 100%;line-height: 52rpx;">{{battery.b1}}</text>
+          </view>
+        </view>
+      </view>
+      <navigator hover-class="none" url="../editDevice/editDevice?devNo={{deviceInfo.devNo}}">
+        <button style="background: #2a8eff; color:#ffffff" class="search_btn">修改</button>
+      </navigator>
+    </scroll-view>
+  </view>
+</view>

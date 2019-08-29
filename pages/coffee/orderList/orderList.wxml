@@ -1,0 +1,61 @@
+<!-- pages/list/list.wxml -->
+<view class="container">
+  <view class="list_wrap">
+    <!-- 搜索模块 -->
+    <view class="list_top" hover-class="none" hover-stop-propagation="false">
+      <!-- <view class="list_header" hover-class="none" hover-stop-propagation="false">
+        <text>咖啡机订单列表</text>
+      </view> -->
+      <view class="search_modle">
+       <view class="search_top">
+          <view class="ipt_wrap" hover-class="none" hover-stop-propagation="false">
+            <input type="text" class="dev_no"  value="" bindinput="getDevNo"   placeholder="设备编号" ></input>
+          </view>
+          </view>
+          <text>\n</text>
+          <view class="search_top">
+          <view class="picker_wrap">
+              <picker mode="date" data-name='startTime' value="{{startTime}}" start="1999-01-01" end="{{endTime?endTime:2099-12-12}}"  bindchange="startTime" bindcancel="Cancel">
+                {{startTime}}
+              </picker>
+              <view class="iconfont icon-sanjiao" hover-class="none" hover-stop-propagation="false"></view>
+              <picker mode="date"  data-name='endTime' value="{{endTime}}" start="{{startTime?startTime:1999-01-01}}" end="2099-12-12" bindchange="endTime" bindcancel="Cancel">
+                {{endTime}}
+              </picker>
+
+              <view class="iconfont icon-sanjiao" hover-class="none" hover-stop-propagation="false"></view>
+              <picker mode="selector" value="{{typeIndex}}" range="{{typeArr}}" range-key="name" bindchange="getType">
+              {{typeArr[typeIndex].name}} 
+              </picker>
+              <view class="iconfont icon-sanjiao" hover-class="none" hover-stop-propagation="false"></view>
+          </view>
+
+          <button class="search_btn" bindtap="search">搜索</button>
+        </view> 
+        <view class="search_bottom" hover-class="none" hover-stop-propagation="false">
+        </view>
+      </view>
+    </view>
+    <!-- 列表 -->
+
+    <scroll-view class="lists" scroll-y='true' bindscrolltolower="bindDownLoad">
+     <block wx:for="{{dataArray}}" wx:for-item="devices" wx:for-index="dataArrayIndex">
+      <!-- l两列 -->
+        <view wx:for="{{devices}}" wx:for-item="item" wx:key="{{item.id}}" wx:for-index="index"  hover-class="none" hover-stop-propagation="true" data-id=''>
+         <navigator class="list_info" url="../orderInfo/orderInfo?orderNo={{item.orderNo}}">  
+        <view class="list_c">
+          <text class="">订单号：{{item.orderNo}}</text>
+          <text>\n</text>
+          <text class="">时　间：{{item.gmtCreate}}</text>
+        </view>
+        <view class="list_r">
+          <text class="">金　　额：{{item.price}}</text>
+          <text>\n</text>
+          <text class="">支付状态：{{item.statusStr}}</text>
+        </view>
+        </navigator>
+      </view>
+    </block>
+    </scroll-view>
+  </view>
+</view>

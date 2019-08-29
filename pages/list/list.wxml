@@ -1,0 +1,81 @@
+<!-- pages/list/list.wxml -->
+<view class="container">
+  <view class="list_wrap">
+    <!-- 搜索模块 -->
+    <view class="list_top" hover-class="none" hover-stop-propagation="false">
+      <view class="list_header" hover-class="none" hover-stop-propagation="false">
+        <view class="iconfont icon-fanhui" hover-class="none" hover-stop-propagation="false"></view>
+        <text>洗衣机设备列表</text>
+      </view>
+      <view class="search_modle">
+        <view class="search_top">
+          <view class="ipt_wrap" hover-class="none" hover-stop-propagation="false">
+            <input type="text" class="device_no" placeholder="设备编号" />
+            <input type="text" class="order_no" placeholder="订单编号" />
+            <input type="text" class="coffee_no" placeholder="通讯编号" />
+          </view>
+          <button class="search_btn">搜索</button>
+        </view>
+        <view class="search_bottom" hover-class="none" hover-stop-propagation="false">
+          <view class="chose_wrap" hover-class="none" hover-stop-propagation="false">
+            <view class="picker_wrap">
+              <picker mode="date" value="{{startDate}}" start="1999-01-01" end="2099-12-12" bindchange="startDate">
+                {{startDate}}
+              </picker>
+              <view class="iconfont icon-sanjiao" hover-class="none" hover-stop-propagation="false"></view>
+            </view>
+            <view class="picker_wrap">
+              <picker mode="date" value="{{endDate}}" start="1999-01-01" end="2099-12-12" bindchange="endDate">
+                {{endDate}}
+              </picker>
+              <view class="iconfont icon-sanjiao" hover-class="none" hover-stop-propagation="false"></view>
+            </view>
+            <view class="picker_wrap">
+              <picker mode="selector" value="{{type}}" range="{{typeArr}}"  bindchange="getType">
+                {{type}}
+              </picker>
+              <view class="iconfont icon-sanjiao" hover-class="none" hover-stop-propagation="false"></view>
+            </view>
+          </view>
+          <button class="search_btn">搜索</button>
+        </view>
+      </view>
+    </view>
+    <!-- 洗衣机 -->
+    <button class="reset_btn">一键重置所有设备价格</button>
+    <!-- 列表 -->
+ 
+    <scroll-view class="lists" hover-class="none" hover-stop-propagation="false">
+      <!-- 三列 -->
+      <view class="list_info" wx:if="{{true}}" hover-class="none" hover-stop-propagation="true" data-id=''>
+        <view class="list_l">咖啡机</view>
+        <view class="list_c">
+          <text class="">编号：{{"DSSNSJSJSSJJS31"}}</text>
+          <text class="">通讯编码：{{"DSSNSJSJSSJJS31"}}</text>
+        </view>
+        <view class="list_r">
+          <text class="">状态：{{"DSSNSJSJSSJJS31"}}</text>
+          <text class="">使用杯数：{{"DSSNSJSJSSJJS31"}}</text>
+        </view>
+      </view>
+      <!-- l两列 -->
+      <view class="list_info" hover-class="none" hover-stop-propagation="true" data-id=''>
+        <view class="list_c">
+          <text class="">编号：{{"DSSNSJSJSSJJS31"}}</text>
+          <text class="">通讯编码：{{"DSSNSJSJSSJJS31"}}</text>
+        </view>
+        <view class="list_r">
+          <text class="">状态：{{"DSSNSJSJSSJJS31"}}</text>
+          <text class="">使用杯数：{{"DSSNSJSJSSJJS31"}}</text>
+        </view>
+      </view>
+
+
+
+    </scroll-view>
+
+
+
+
+  </view>
+</view>

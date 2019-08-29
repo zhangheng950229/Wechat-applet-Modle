@@ -1,0 +1,90 @@
+<!-- pages/orderinfo/orderinfo.wxml -->
+<view class="container">
+  <view class="orderinfo_wrap">
+    <!-- 搜索模块 -->
+    <!-- <view class="orderinfo_top" hover-class="none" hover-stop-propagation="false">
+      <view class="orderinfo_header" hover-class="none" hover-stop-propagation="false">
+        <text>订单详情</text>
+      </view>
+    </view> -->
+    <!-- 订单详情 -->
+    <scroll-view class="info_main" scroll-y='true'>
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            订单编号:
+          </label>
+          <text>{{orderInfo.orderNo}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            设备编号:
+          </label>
+          <text>{{orderInfo.devNo}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            支付金额:
+          </label>
+          <text>{{orderInfo.deposit}}</text>
+        </view>
+      </view>
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            创建时间:
+          </label>
+          <text>{{orderInfo.gmtCreate}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            租赁时间:
+          </label>
+          <text>{{orderInfo.duration}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            电池编号:
+          </label>
+          <text>{{orderInfo.batteryNo}}</text>
+        </view>
+      </view>
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            支付方式:
+          </label>
+          <text>{{orderInfo.payStyle}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            租赁状态:
+          </label>
+          <text>{{orderInfo.statusStr}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            退款编号:
+          </label>
+          <text>{{orderInfo.refundNo}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            退款金额:
+          </label>
+          <text>{{orderInfo.refundAmount}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

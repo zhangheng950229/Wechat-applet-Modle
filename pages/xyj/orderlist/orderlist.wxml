@@ -1,0 +1,67 @@
+<!-- pages/list/list.wxml -->
+<view class="container">
+  <view class="list_wrap">
+
+    <!-- 搜索模块 -->
+    <view class="list_top" hover-class="none" hover-stop-propagation="false">
+      
+      <view class="search_modle">
+        <view class="search_top">
+          <view class="ipt_wrap" hover-class="none" hover-stop-propagation="false">
+            <!-- <input type="text" class="device_no" placeholder="设备编号"> </input> -->
+            <input type="text" class="order_no" placeholder="订单编号" bindinput='getOrderNo'></input>
+            <!-- <input type="text" class="coffee_no" placeholder="通讯编号" ></input> -->
+          </view>
+          <button class="search_btn" bindtap="search">搜索</button>
+        </view>
+        <view class="search_bottom" hover-class="none" hover-stop-propagation="false">
+          <view class="chose_wrap" hover-class="none" hover-stop-propagation="false">
+            <view class="picker_wrap">
+              <picker mode="date" data-name='startDate' value="{{startDate.value}}" start="1999-01-01" end="{{endDate.value}}" bindchange="getType" bindcancel="Cancel">
+                {{startDate.date}}
+              </picker>
+              <view class="iconfont icon-sanjiao" hover-class="none" hover-stop-propagation="false"></view>
+            </view>
+            <view class="picker_wrap">
+              <picker mode="date" data-name='endDate' value="{{endDate.value}}" start="{{startDate.value}}" end="2099-12-12" bindchange="getType" bindcancel="Cancel">
+                {{endDate.date}}
+              </picker>
+              <view class="iconfont icon-sanjiao" hover-class="none" hover-stop-propagation="false"></view>
+            </view>
+            <view class="picker_wrap">
+              <picker mode="selector" data-name='paytype' value="{{typeIndex}}" range="{{typeArr}}" range-key="name" bindchange="getType">
+                {{typeArr[typeIndex].name}}
+              </picker>
+              <view class="iconfont icon-sanjiao" hover-class="none" hover-stop-propagation="false"></view>
+            </view>
+            <!-- <input type="text" class="device_no" placeholder="设备编号" bindinput="getDevNo"></input> -->
+          </view>
+          <!-- <button class="search_btn" bindtap="search">搜索</button> -->
+        </view>
+      </view>
+    </view>
+    <!-- 列表 -->
+    <scroll-view class="lists" scroll-y='true' bindscrolltolower="bindDownLoad">
+      <block  wx:for="{{ dataArray}}"
+       wx:for-item="devices" 
+       wx:for-index="dataArrayIndex" >  
+        <block wx:for="{{devices}}" wx:for-item="item" wx:key="{{item.id}}" wx:for-index="index">
+          <navigator hover-class="none" url="../orderInfo/orderInfo?orderNo={{item.orderNo}}">    
+            <view class="list_info" hover-class="none" hover-stop-propagation="true">
+              <view class="list_c">
+                <text class="">订单号：{{item.orderNo}}</text>
+                <view>时间：<text>{{item.gmtCreate}}</text></view>
+              </view>
+              <view class="list_r">
+                <view >金额：<text class="color_red">{{item.price}}</text></view>
+                <view>支付状态：<text class="color_blue">{{item.payStatusStr}}</text></view>
+              </view>
+            </view>
+          </navigator>
+        </block>
+      </block>
+
+        
+    </scroll-view>
+  </view>
+</view>

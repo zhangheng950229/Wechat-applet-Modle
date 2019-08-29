@@ -1,0 +1,53 @@
+<!-- pages/list/list.wxml -->
+<view class="container">
+  <view class="list_wrap">
+    <view class="cue {{showModle ? 'isModleShow':'isModleHide'}}"  catchtouchmove='ture'>
+      <view class="cue_main">
+        <view class="cue_header">
+          价格设置
+          <text class="iconfont icon-guanbi" catchtap="closeModle"></text>
+        </view>
+      </view>
+    </view>
+    <!-- 搜索模块 -->
+    <view class="list_top" hover-class="none" hover-stop-propagation="false">
+      <!-- <view class="list_header" hover-class="none" hover-stop-propagation="false">
+        <text>咖啡机设备列表</text>
+      </view> -->
+      <view class="search_modle">
+       <view class="search_top">
+          <view class="ipt_wrap" hover-class="none" hover-stop-propagation="false">
+            <input type="text" class="dev_no"  value="" bindinput="getDevNo"   placeholder="编号" ></input>
+            <input type="text" class="mach_no" value="" bindinput="getMachNo" placeholder="通讯编号" ></input>
+          </view>
+          <button class="search_btn" bindtap="search">搜索</button>
+        </view> 
+        <view class="search_bottom" hover-class="none" hover-stop-propagation="false">
+        </view>
+      </view>
+    </view>
+    <!-- 列表 -->
+
+    <scroll-view class="lists" scroll-y='true' bindscrolltolower="bindDownLoad">
+     <block wx:for="{{dataArray}}" wx:for-item="devices" wx:for-index="dataArrayIndex">
+        
+        <view  wx:for="{{devices}}" wx:for-item="item" wx:key="{{item.id}}" wx:for-index="index"  hover-class="none" hover-stop-propagation="true" data-id=''>
+        <navigator class="list_info" url="../machineInfo/machineInfo?devNo={{item.devNo}}">  
+          <view class="list_l">
+              <text class="">{{item.name}}</text>
+            </view>
+            <view class="list_c">
+              <text class="">编　　号：{{item.devNo}}</text>
+              <text class="">通讯编码：{{item.machNo}}</text>
+            </view>
+            <view class="list_r">
+              <text class="">状　　态：{{item.statusStr}}</text>
+              <text class="">使用杯数：{{item.usesCount}}</text>
+            </view>
+         </navigator>
+      </view>
+    
+    </block>
+    </scroll-view>
+  </view>
+</view>

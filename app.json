@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/xyj/orderlist/orderlist",
+    "pages/navigation/navigation",
+    "pages/login/login",
+    "pages/xyj/orderInfo/orderInfo",
+    "pages/xyj/machine/machine",
+    "pages/xyj/machineInfo/machineInfo",    
+    "pages/xyj/modify/modify",
+    "pages/xyj/record/record",
+
+    "pages/coffee/machine/machine",
+    "pages/coffee/machineInfo/machineInfo",    
+    "pages/coffee/modify/modify",    
+    "pages/coffee/orderList/orderList",
+    "pages/coffee/orderInfo/orderInfo",
+
+    "pages/battery/list/list",
+    "pages/battery/deviceInfo/deviceInfo",
+    "pages/battery/editDevice/editDevice",
+    "pages/battery/orderInfo/orderInfo",
+    "pages/battery/orderList/list",
+
+    "pages/list/list",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2a8eff",
+    "navigationBarTitleText": "紫藤物联管理平台", 
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+  
+}

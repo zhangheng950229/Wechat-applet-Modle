@@ -1,0 +1,47 @@
+<!-- pages/orderinfo/orderinfo.wxml -->
+<view class="container">
+  <view class="orderinfo_wrap">
+  
+    <scroll-view class="info_main" scroll-y='true'>
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            订单编号:
+          </label>
+          <text style="font-size:30rpx;">{{deviceInfo.orderNo}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            设备编号:
+          </label>
+          <text style="font-size:30rpx;">{{deviceInfo.devNo}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            支付金额:
+          </label>
+          <text style="font-size:30rpx;">{{deviceInfo.price}}</text>
+        </view>
+      </view>
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            订单时间:
+          </label>
+          <text style="font-size:30rpx;">{{deviceInfo.gmtCreate}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            支付状态:
+          </label>
+          <text style="font-size:30rpx;">{{deviceInfo.statusStr}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

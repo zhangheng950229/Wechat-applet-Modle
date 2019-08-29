@@ -1,0 +1,118 @@
+<!-- pages/orderinfo/orderinfo.wxml -->
+<view class="container">
+  <view class="orderinfo_wrap">
+    <!-- 搜索模块 -->
+    <!-- <view class="orderinfo_top" hover-class="none" hover-stop-propagation="false">
+      <view class="orderinfo_header" hover-class="none" hover-stop-propagation="false">
+        <text>设备修改</text>
+      </view>
+    </view> -->
+    <!-- 订单详情 -->
+    <scroll-view class="info_main" scroll-y='true'>
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+           设备编号:
+          </label>
+          <text style="color: #9e9eaa;">{{devNo}}</text>
+        </view>
+
+      </view>
+
+      <view class="model_head">
+        咖啡机摆放地址
+      </view>
+      <view class="order_info_modle edit_modle">
+
+        <view class="city_wrap" style="width: 100%;">
+          <city-component id="citys" province="{{province}}" city="{{city}}" area="{{area}}" bindgetSelectCity="getSelectCity" style="width: 100%;"></city-component>
+        </view>
+
+      </view>
+      <view class="order_info_modle edit_modle">
+        <view style="width: 100%;">
+          <textarea class="" value="{{address}}" placeholder="具体地址" bindinput='getAddress'>
+          </textarea>
+        </view>
+      </view>
+
+
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+            <!-- <text class="iconfont icon-dian:before"></text> -->
+            第一杯重置天数:
+          </label>
+          <text></text>
+          <input type="text" class="dev_no" value="{{cookieValid}}" bindinput="getCookieValid"></input>
+          <text style="font-size:26rpx;">(以天为单位)</text>
+        </view>
+      </view>
+
+
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+            <!-- <text class="iconfont icon-dian:before"></text> -->
+            第一种咖啡价格:
+          </label>
+          <text></text>
+          <input type="text" class="dev_no" value="{{price1}}" bindinput="getPrice1"></input>
+          <text style="font-size:26rpx;">元</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="" class="dis">
+            <!-- <text class="iconfont icon-dian:before"></text> -->
+            限制杯数:
+          </label>
+          <text></text>
+          <input type="text" class="dev_no" value="{{deviceInfo.price1Limit}}" bindinput="getPrice1Limit"></input>
+          <text style="font-size:26rpx;">杯</text>
+        </view>
+      </view>
+
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+            <!-- <text class="iconfont icon-dian:before"></text> -->
+            第二种咖啡价格:
+          </label>
+          <text></text>
+          <input type="text" class="dev_no" value="{{price2}}" bindinput="getPrice2"></input>
+          <text style="font-size:26rpx;">元</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="" class="dis">
+            <!-- <text class="iconfont icon-dian:before"></text> -->
+            限制杯数:
+          </label>
+          <text></text>
+          <input type="text" class="dev_no" value="{{deviceInfo.price2Limit}}" bindinput="getPrice2Limit"></input>
+          <text style="font-size:26rpx;">杯</text>
+        </view>
+      </view>
+
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+            <!-- <text class="iconfont icon-dian:before"></text> -->
+            第三种咖啡价格:
+          </label>
+          <text></text>
+          <input type="text" class="dev_no" value="{{price3}}" bindinput="getPrice3"></input>
+          <text style="font-size:26rpx;">元</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="" class="dis">
+            <!-- <text class="iconfont icon-dian:before"></text> -->
+            限制杯数:
+          </label>
+          <text></text>
+          <input type="text" class="dev_no" value="{{deviceInfo.price3Limit}}" bindinput="getPrice3Limit"></input>
+          <text style="font-size:26rpx;">杯</text>
+        </view>
+        <button style="background: #2a8eff; color:#ffffff" bindtap='saveDevice' class="search_btn">保存</button>
+      </view>
+    </scroll-view>
+  </view>
+</view>

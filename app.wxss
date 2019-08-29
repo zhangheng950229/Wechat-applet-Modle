@@ -1,0 +1,46 @@
+/* icofont */
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1564381026720'); /* IE9 */
+  src: url('iconfont.eot?t=1564381026720#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAMIAAsAAAAABygAAAK6AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDMgqBRIEyATYCJAMUCwwABCAFhG0HShtABsiuMG7hSQvS7spuNSMNvj25yPq0HFPlInj+fnxzbryfYVkURZuYtLT8aZsKaCkFVrAosUGy+E2ca3GeWiAVNEvxKEvQiSTop+g3R1OCbVOXD7wMOd3+VMAJEA2yXwkrSmHrOrX5wIILDrn5qQXkcaKBQAkdLf3zl+O7a3KUzWffcplj6tiAUcCB7oFRZAWUWADeoLuIyclfu0+g2yQWeHzv5KbWU4BlgThPXtV6VlhRslyn0EzsLeKOqjPdSi9xm38+vtqIHknNwNozB7u2tvFh6T0J/7Z1jlq9us6J7BAZ6wCFuDqZPq8pMgas+3sth9V065SkD9uvI6+ndzC2NVoKvKEbql3xx0sK0Yiqe8HhMFP4sIQRmQ+biODDEyLxLZB6THUF3bJiFmAf0M5zVxJwUxO5t/fmlcVr58ubu7jEXaC99PbG/wMzrC+RfdLtf1pA/3zK9P3vjbae3N+wMZwIQ1UjBdEMAaNfX378Sn/PNTW05SAPAaSfMeQTjTWky/U/EAiuP8ifvyPG/04KeG+nHg+3ldrxTKfEZomvSjYOlFYGLLXUzVhce6veC9SpmeiGX/qHna7Rjm1OEjotSQZJhwnIOs1jhbwOVY8taHQ6BN3WuId7jCg0RenCqjqAMGgCSb+HkA1aYYV8hGrcBxqD0YRuZ4M4s8di0MBkVIIW9A+QyVKHbDIQtVfoq1ixKeOsO+SSYjDHi25uH1PkKzaUn35exIHjLIG94DGM4wxyzkI0Mp6J5OsTIZp60dhkSW3gGIYUgSzg+QFSRibl6HgxGLz/CvIqMYUXWjb8dxAr0fRAwhM3YPvqdFPLrzxT+uTNqwgHRFgmAZxgForFMiCbnhVChhhLDiRz6wQ4KtqqHj+vTX6gKOsAnFcjRY4SNRrNgUpnFXVLtiYklXXiSqWaWgEFploNAAA=') format('woff2'),
+  url('iconfont.woff?t=1564381026720') format('woff'),
+  url('iconfont.ttf?t=1564381026720') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1564381026720#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fanhui:before {
+  content: "\e641";
+}
+
+.icon-sanjiao:before {
+  content: "\e65a";
+}
+
+.icon-guanbi:before {
+  content: "\e635";
+}
+
+.icon-dian:before {
+  content: "\ec1e";
+}
+
+
+/**app.wxss**/
+page{
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+} 

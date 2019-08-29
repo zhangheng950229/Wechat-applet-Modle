@@ -1,0 +1,79 @@
+<!-- pages/orderinfo/orderinfo.wxml -->
+<view class="container">
+  <view class="orderinfo_wrap">
+    <!-- 搜索模块 -->
+    <!-- <view class="orderinfo_top" hover-class="none" hover-stop-propagation="false">
+      <view class="orderinfo_header" hover-class="none" hover-stop-propagation="false">
+        <text>设备修改</text>
+      </view>
+    </view> -->
+    <!-- 订单详情 -->
+    <scroll-view class="info_main" scroll-y='true'>
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            设备编号:
+          </label>
+          <text>{{devNo}}</text>
+        </view>
+        
+      </view>
+
+
+
+      <view class="modle ">
+        <view class="model_head" >
+          充电宝摆放地址
+        </view>
+        <view class="order_info_modle edit_modle">
+          <view class="city_wrap" style="width: 100%;">
+            <city-component id="citys" province="{{province}}" city="{{city}}" area="{{area}}" bindgetSelectCity="getSelectCity" style="width: 100%;"></city-component>
+          </view>
+            
+        </view>
+        <view class="order_info_modle edit_modle">
+          <view style="width: 100%;">
+          <textarea value="{{address}}" placeholder="具体地址" bindinput='getAddress'>
+          
+          
+          </textarea>  
+          </view>
+        </view>
+      </view>
+
+
+      <view class="modle">
+        <view class="order_info_modle edit_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            每小时单价:
+          </label>
+          <view>
+            <input class="" value="{{unitPrice}}" bindinput='getUnitPrice'></input>元
+          </view>
+        </view>
+        <view class="order_info_modle edit_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            押金金额:
+          </label>
+          <view>
+            <input class="" value="{{deposit}}" bindinput='getDeposit'></input>元
+          </view>
+        </view>
+        <view class="order_info_modle edit_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            免费时长:
+          </label>
+          <view>
+            <input class="" value="{{freeTime}}" bindinput='getFreeTime'></input>时
+          </view>
+        </view>
+        <button style="background: #2a8eff; color:#ffffff; margin-top: 80rpx;" class="search_btn" bindtap="saveDevice">保存</button>
+      </view>
+     
+    </scroll-view>
+  </view>
+</view>

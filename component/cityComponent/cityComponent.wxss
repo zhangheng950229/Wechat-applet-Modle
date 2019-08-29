@@ -1,0 +1,9 @@
+.picker {
+    background-color: #FFFFFF;
+    height: 74rpx;
+    font-size: 32rpx;
+    line-height: 74rpx;
+    
+}
+
+

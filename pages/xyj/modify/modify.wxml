@@ -1,0 +1,102 @@
+<!-- pages/orderinfo/orderinfo.wxml -->
+<view class="container">
+  <view class="orderinfo_wrap">
+    <!-- 搜索模块 -->
+    <!-- <view class="orderinfo_top" hover-class="none" hover-stop-propagation="false">
+      <view class="orderinfo_header" hover-class="none" hover-stop-propagation="false">
+        <text>设备修改</text>
+      </view>
+    </view> -->
+    <!-- 订单详情 -->
+    <scroll-view class="info_main" scroll-y='true'>
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            设备编号:
+          </label>
+          <text>{{devNo}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            类别:
+          </label>
+          <text>{{name}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            IMEI编号:
+          </label>
+          <text>{{IMEINO}}</text>
+        </view>
+      </view>
+
+
+
+      <view class="modle ">
+
+        <view class="order_info_modle edit_modle block_modle">
+          <text class="iconfont icon-dian:before"></text>
+          <city-component id="citys" province="{{province}}" city="{{city}}" area="{{area}}" bindgetSelectCity="getSelectCity" style="flex: 1;"></city-component>
+        </view>
+
+        <view class="order_info_modle edit_modle block_modle">
+          <text class="iconfont icon-dian:before"></text>
+          <textarea class="" value="{{address}}" placeholder="具体地址" bindinput='getAddress'></textarea>
+        </view>
+
+      </view>
+
+
+      <view class="modle">
+        <view class="model_head" >
+          价格设置
+        </view>
+          
+        <view class="order_info_modle edit_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            标准洗:
+          </label>
+          <view>
+            <input class="" value="{{standard}}" bindinput='getValue' data-name='standard'></input>元
+          </view>
+        </view>
+        <view class="order_info_modle edit_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            快速洗:
+          </label>
+          <view>
+            <input class="" value="{{fast}}" bindinput='getValue' data-name='fast'></input>元
+          </view>
+        </view>
+        <view class="order_info_modle edit_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            强力洗:
+          </label>
+          <view>
+            <input class="" value="{{strength}}" bindinput='getValue' data-name='strength' ></input>元
+          </view>
+        </view>
+        <view class="order_info_modle edit_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            单脱洗:
+          </label>
+          <view>
+            <input class="" value="{{dehydration}}" bindinput='getValue' data-name='dehydration'></input>元
+          </view>
+        </view>
+
+
+      </view>
+     
+      <button class="save_btn" bindtap='saveDevice'>保存</button>
+
+    </scroll-view>
+  </view>
+</view>

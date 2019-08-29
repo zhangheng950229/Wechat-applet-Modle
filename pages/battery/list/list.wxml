@@ -1,0 +1,47 @@
+<!-- pages/list/list.wxml -->
+<view class="container">
+  <view class="list_wrap" style="display: flex;flex-direction: column;height: 100%;">
+    <!-- 搜索模块 -->
+    <view class="list_top" hover-class="none" hover-stop-propagation="false">
+      <!-- <view class="list_header" hover-class="none" hover-stop-propagation="false">
+        <text>共享充电宝设备列表</text>
+      </view> -->
+      <view class="search_modle">
+        <view class="search_top">
+          <view class="picker_wrap">
+            <picker mode="selector" value="{{typeIndex}}" range="{{typeArr}}" range-key="name" bindchange="getType">
+              {{typeArr[typeIndex].name}}
+            </picker>
+            <view class="iconfont icon-sanjiao" hover-class="none" hover-stop-propagation="false"></view>
+          </view>
+          <view class="ipt_wrap" hover-class="none" hover-stop-propagation="false">
+            <input type="text" class="device_no" placeholder="设备编号" bindinput="getDevNo"/>
+          </view>
+          <button class="search_btn" bindtap="search">搜索</button>
+        </view>
+      </view>
+    </view>
+    <!-- 列表 -->
+    <view class="lists" hover-class="none" hover-stop-propagation="false" style="flex: 1;height: 100%; display:flex;">
+      <scroll-view scroll-y="true" scroll-y="{{true}}" style="flex: 1;overflow-y: scrool;height: 100%; padding-bottom: 40rpx;" bindscrolltolower="bindDownLoad">
+
+        <block wx:for="{{dataArray}}" wx:for-item="devices" wx:for-index="dataArrayIndex">
+          <block wx:for="{{devices}}" wx:for-item="item" wx:key="{{item.id}}" wx:for-index="index">
+            <navigator hover-class="none" url="../deviceInfo/deviceInfo?devNo={{item.devNo}}">    
+              <view class="list_info" hover-class="none" hover-stop-propagation="true" data-id=''>
+                <view class="list_c">
+                  <text class="">设备编号：{{item.devNo}}</text>
+                  <text class="">设备状态：{{item.statusStr}}</text>
+                </view>
+                <view class="list_r">
+                  <text class="">空槽：{{item.stillNumber}}</text>
+                  <text class="">可借：{{item.borrowNumber}}</text>
+                </view>
+              </view>
+            </navigator>
+          </block>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</view>

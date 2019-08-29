@@ -1,0 +1,113 @@
+<!-- pages/orderinfo/orderinfo.wxml -->
+<view class="container">
+  <view class="orderinfo_wrap">
+    <!-- 搜索模块 -->
+    <view class="orderinfo_top" hover-class="none" hover-stop-propagation="false">
+      <view class="orderinfo_header" hover-class="none" hover-stop-propagation="false">
+        <text>订单详情</text>
+      </view>
+    </view>
+    <!-- 订单详情 -->
+    <scroll-view class="info_main" scroll-y='true'>
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            订单号:
+          </label>
+          <text>{{orderInfo.orderNo}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            付款方式:
+          </label>
+          <text>{{orderInfo.paymentStyle}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            支付金额:
+          </label>
+          <text>{{orderInfo.price}}</text>
+        </view>
+      </view>
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            支付状态:
+          </label>
+          <text>{{orderInfo.payStatusStr}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            订单状态:
+          </label>
+          <text>{{orderInfo.startStatusStr}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            订单创建时间:
+          </label>
+          <text>{{orderInfo.gmtCreate}}</text>
+        </view>
+      </view>
+      <view class="modle">
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            支付时间:
+          </label>
+          <text>{{orderInfo.gmtModified}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            设备编号:
+          </label>
+          <text>{{orderInfo.devNo}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            工作模式:
+          </label>
+          <text>{{orderInfo.packageName}}</text>
+        </view>
+        <!-- <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            是否异常订单:
+          </label>
+          <text>{{orderInfo.abnormalFlag}}</text>
+        </view> -->
+      </view>
+       <view class="modle">
+        <!-- <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            是否洗涤结束:
+          </label>
+          <text>{{orderInfo.abnormalFlag}}</text>
+        </view> -->
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            工作开始时间:
+          </label>
+          <text>{{orderInfo.startTime?orderInfo.startTime:""}}</text>
+        </view>
+        <view class="order_info_modle">
+          <label for="">
+            <text class="iconfont icon-dian:before"></text>
+            工作结束时间:
+          </label>
+          <text>{{orderInfo.endTime?orderInfo.endTime:""}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

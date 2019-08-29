@@ -1,0 +1,71 @@
+<view class="container" hover-class="none" hover-stop-propagation="false">
+  <view class="nav_wrap" hidden="{{hidden}}">
+    <view class="user_info">
+      <text>用户：{{userName}}</text>
+      <button class="sign_out_btn" bindtap='logout'>退出登录</button>
+    </view>
+    <view class="nav_header">请选择您要管理的设备</view>
+    <view class="nav_main">
+      <view class="nav_list">
+        
+        <view class="nav_opt">
+          <view class="opt_l">
+            <image class="opt_logo" src="./images/xyj.png" mode="widthFix" />
+            <text class="opt_title">洗衣机</text>
+          </view>
+          <view class="opt_r">
+            <view class="machines_num">共{{washerNum}}台</view>
+            <view class="opt_but_wrap">
+              <navigator hover-class="none" url="../xyj/machine/machine">    
+                <button class="machines_list_btn" bindtap='washerDeviceList'>设备列表</button>
+              </navigator>
+              <navigator hover-class="none" url="../xyj/orderlist/orderlist">    
+                <button class="orders_list_btn">订单列表</button>
+              </navigator>
+            </view>
+          </view>
+        </view>
+
+
+        <view class="nav_opt">
+          <view class="opt_l">
+            <image class="opt_logo" src="./images/kfj.png" mode="widthFix" />
+            <text class="opt_title">咖啡机</text>
+          </view>
+          <view class="opt_r">
+            <view class="machines_num">共{{coffeeNum}}台</view>
+            <view class="opt_but_wrap">
+              <navigator hover-class="none" url="../coffee/machine/machine">    
+                <button class="machines_list_btn">设备列表</button>
+              </navigator>
+              <navigator hover-class="none" url="../coffee/orderList/orderList">    
+                <button class="orders_list_btn">订单列表</button>
+              </navigator>
+            </view>
+          </view>
+        </view>
+
+
+        <view class="nav_opt">
+          <view class="opt_l">
+            <image class="opt_logo" src="./images/cdb.png" mode="widthFix" />
+            <text class="opt_title">充电宝</text>
+          </view>
+          <view class="opt_r">
+            <view class="machines_num">共{{batteryNum}}台</view>
+            <view class="opt_but_wrap">
+              <navigator hover-class="none" url="../battery/list/list">    
+                <button class="machines_list_btn">设备列表</button>
+              </navigator>
+              <navigator hover-class="none" url="../battery/orderList/list">    
+                <button class="orders_list_btn">订单列表</button>
+              </navigator>
+            </view>
+          </view>
+        </view>
+
+
+      </view>
+    </view>
+  </view>
+</view>

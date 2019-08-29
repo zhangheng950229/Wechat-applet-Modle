@@ -1,0 +1,263 @@
+/* pages/list/list.wxss */
+
+.list_wrap {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.list_top {
+  width: 100%;
+  background: #2a8eff;
+  padding-bottom: 28rpx;
+  margin-bottom: 20rpx;
+}
+
+.list_header {
+  color: #fff;
+  width: 100%;
+  padding: 0 0 0 30rpx;
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  box-sizing: border-box; 
+}
+
+.icon-fanhui {
+  /* display: inline-block; */
+  float: left;
+  font-size: 36rpx;
+}
+
+.list_header text {
+  text-align: center;
+  font-size: 40rpx;
+  padding: 38rpx 40rpx 38rpx 0;
+  flex: 1;
+}
+
+/* 搜索模块上边输入框搜索按钮部分 */
+
+.search_top {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 30rpx;
+}
+
+.ipt_wrap {
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
+  align-items: center;
+}
+
+.ipt_wrap input {
+  width: 80%;
+  height: 48rpx;
+  padding-left: 10rpx;
+  margin-right: 12rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  font-size: 28rpx;
+}
+
+.search_btn {
+  width: 160rpx;
+  height: 54rpx;
+  background: #fff;
+  color: #006cd9;
+  border-radius: 100rpx;
+  letter-spacing: 10rpx;
+  font-size: 15px;
+  line-height: 54rpx;
+}
+
+.search_bottom {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 20rpx 20rpx 0;
+}
+
+.search_bottom input {
+  height: 48rpx;
+  padding-left: 10rpx;
+  margin-right: 12rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  font-size: 28rpx;
+  flex: 1;
+}
+
+.chose_wrap {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+
+.picker_wrap {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.picker_wrap .icon-sanjiao {
+  font-size: 48rpx;
+}
+
+/* 重置按钮 */
+
+.reset_btn {
+  width: 90%;
+  height: 64rpx;
+  background: #df5f5e;
+  color: #fff;
+  border-radius: 10rpx;
+  margin: 20rpx auto;
+  font-size: 32rpx;
+  line-height: 64rpx;
+}
+
+/* 列表样式 */
+
+.lists {
+  flex: 1;
+  /* height: 300rpx; */
+  overflow: scroll;
+  /* background: #2a8eff; */
+}
+
+.list_info {
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 30rpx 20rpx;
+  box-shadow: 0 0 5px #d4d4d4;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24rpx;
+}
+
+.list_info view text {
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list_l {
+  width: 25%;
+  padding-right: 16rpx;
+  border-right: 1px solid #ddd;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  color: #b58241;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+}
+
+.list_c {
+  width: 45%; 
+  padding-right: 16rpx;
+  margin-left: 10rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  border-right: 1px solid #ddd; 
+  flex: none;
+}
+
+
+
+.list_r {
+  width: 30%;
+  padding-left: 16rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+  text-align: left;
+  flex: none;
+}
+
+/* 洗衣机价格设置蒙层 */
+
+.cue {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 10;
+}
+
+.isModleShow {
+  display: block;
+}
+
+.isModleHide {
+  display: none;
+}
+
+.cue_main {
+  width: 74%;
+  background: #fff;
+  border-radius: 24rpx;
+  overflow: hidden;
+  margin: 30% auto 0;
+}
+
+.cue_header {
+  text-align: center;
+  font-size: 40rpx;
+  background: #2a8eff;
+  color: #fff;
+  padding: 28rpx 0;
+  position: relative;
+  z-index: 11;
+}
+
+.icon-guanbi {
+  position: absolute;
+  right: 6%;
+  top: 10%;
+  font-size: 40rpx;
+}
+
+/* 蒙层价格wrap */
+
+.prize_wrap {
+  box-sizing: border-box;
+  padding: 36rpx 30rpx;
+}
+
+.inpt_wrap {
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  color: #898b97;
+  margin-bottom: 20rpx;
+}
+
+.inpt_wrap input {
+  border-bottom: 1px solid #adadb5;
+  text-align: center;
+}
+
+.save_btn {
+  margin-top: 40rpx;
+  background: #2a8eff;
+  color: #fff;
+  border-radius: 16rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  font-size: 32rpx;
+  letter-spacing: 10rpx;
+}
